@@ -92,15 +92,15 @@ g.es("admin pelican Github 執行完畢")
 <t tx="leo.20180423103639.1"></t>
 <t tx="leo.20180423103656.1">@language md
 ---
-Title: 2020 Fall CP 課程
-Date: 2020-08-13 11:00
+Title: 2021-協同產品設計實習-stage1-ag5 W1
+Date: 2021-02-25 11:00
 Category: Misc
-Tags: 2020FallCP
+Tags: 2021FallCP
 Slug: 2020-Fall-Intro-to-computer-programming
-Author: yen
+Author: 40823106
 ---
 
-2020 Fall 計算機程式的教學主要介紹 Python 與 Flutter 在機械設計流程中的應用.
+第一周進度 在github建立cd2021倉儲，並成功架設CD2021網頁及利用Leo Editor編輯pelican.leo 以建立blog網誌。
 
 &lt;!-- PELICAN_END_SUMMARY --&gt;
 
