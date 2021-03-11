@@ -92,7 +92,7 @@ g.es("admin pelican Github 執行完畢")
 <t tx="leo.20180423103639.1"></t>
 <t tx="leo.20180423103656.1">@language md
 ---
-Title: 2021-協同產品設計實習-stage1-ag5 W1
+Title: 2021-協同產品設計實習-
 Date: 2021-02-25 11:00
 Category: Misc
 Tags: 2021FallCP
