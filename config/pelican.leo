@@ -56,9 +56,8 @@
 <v t="leo.20170710022041.1"><vh>@path markdown</vh>
 <v t="leo.20180115115910.1"><vh>2020</vh>
 <v t="leo.20180423103639.1"><vh>2020 Fall CP 課程</vh>
-<v t="leo.20180423103656.1"><vh>@clean20200813.md</vh>
+<v t="leo.20180423103656.1"><vh>@clean 20200813.md</vh>
 <v t="leo.20210303203551.1"><vh>newHeadline</vh></v>
-<v t="leo.20210311135951.1"><vh>newHeadline</vh></v>
 </v>
 </v>
 </v>
@@ -93,11 +92,11 @@ g.es("admin pelican Github 執行完畢")
 <t tx="leo.20180423103639.1"></t>
 <t tx="leo.20180423103656.1">@language md
 ---
-Title: 2021-協同產品設計實習-
+Title: 2021-協同產品設計實習
 Date: 2021-02-25 11:00
 Category: Misc
-Tags: 2021FallCP
-Slug: 2020-Fall-Intro-to-computer-programming
+Tags: 2021-協同產品設計實習
+Slug: 2021-協同產品設計實習
 Author: 40823106
 ---
 
@@ -123,7 +122,6 @@ Flutter
 ----
 
 Flutter 可以用來開發跨 Apple 與 Android 手機與平板上的 Apps</t>
-<t tx="leo.20210311135951.1"></t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/
