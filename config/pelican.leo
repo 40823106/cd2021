@@ -60,6 +60,7 @@
 <v t="leo.20210311162905.1"><vh>@clean 20200813.md</vh></v>
 <v t="leo.20210303203551.1"><vh>newHeadline</vh></v>
 </v>
+<v t="leo.20210311163623.1"><vh>@clean 20200213.md</vh></v>
 </v>
 </v>
 </v>
@@ -138,6 +139,21 @@ Author: 40823106
 &lt;!-- PELICAN_END_SUMMARY --&gt;
 
 @others
+</t>
+<t tx="leo.20210311163623.1">@language md
+---
+Title: 2021-協同產品設計實習 W2
+Date: 2021-02-25 11:00
+Category: Misc
+Tags: 2021-協同產品設計實習 W2
+Slug: 2021-協同產品設計實習VW2
+Author: 40823106
+---
+
+第二周進度:執行小組專案 
+
+&lt;!-- PELICAN_END_SUMMARY --&gt;
+
 </t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
