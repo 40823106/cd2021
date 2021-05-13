@@ -56,17 +56,15 @@
 <v t="leo.20170710022041.1"><vh>@path markdown</vh>
 <v t="leo.20180115115910.1"><vh>2020</vh>
 <v t="leo.20180423103639.1"><vh>2020 Fall CP 課程</vh>
-<v t="leo.20180423103656.1"><vh>@clean 20200813w1.md</vh>
-<v t="leo.20210311162905.1"><vh>@clean 20200813w2.md</vh></v>
-<v t="leo.20210303203551.1"><vh>@clean 20200813w3.md</vh></v>
-<v t="leo.20210513144032.1"><vh>@clean 20200813w4.md</vh></v>
-<v t="leo.20210513144213.1"><vh>@clean 20200813w5.md</vh></v>
-<v t="leo.20210513144644.1"><vh>@clean 20200813w6.md</vh></v>
-<v t="leo.20210513144844.1"><vh>@clean 20200813w7.md</vh></v>
-<v t="leo.20210513144945.1"><vh>@clean 20200813w8.md</vh></v>
-<v t="leo.20210513145218.1"><vh>@clean 20200813w9.md</vh></v>
-</v>
-<v t="leo.20210311163623.1"><vh>@clean 20200213.md</vh></v>
+<v t="leo.20180423103656.1"><vh>@clean 20200813w1.md</vh></v>
+<v t="leo.20210311163623.1"><vh>@clean 20200813w2.md</vh></v>
+<v t="leo.20210513152518.1"><vh>@clean 20200813w3.md</vh></v>
+<v t="leo.20210513152557.1"><vh>@clean 20200813w4.md</vh></v>
+<v t="leo.20210513152555.1"><vh>@clean 20200813w5.md</vh></v>
+<v t="leo.20210513152553.1"><vh>@clean 20200813w6.md</vh></v>
+<v t="leo.20210513152537.1"><vh>@clean 20200813w7.md</vh></v>
+<v t="leo.20210513152547.1"><vh>@clean 20200813w8.md</vh></v>
+<v t="leo.20210513152544.1"><vh>@clean 20200813w9.md</vh></v>
 </v>
 </v>
 </v>
@@ -115,22 +113,7 @@ Author: 40823106
 @others
 
 </t>
-<t tx="leo.20210303203551.1">@language md
----
-Title: 2021-協同產品設計實習stage1 W3
-Date: 2021-02-25 11:00
-Category: Misc
-Tags: 2021-協同產品設計實習 stage1 W3
-Slug: 2021-協同產品設計實習stage1 W3
-Author: 40823106
----
-
-第三周進度:設定coppelia sim (V-rep)導入模型並模擬
-
-&lt;!-- PELICAN_END_SUMMARY --&gt;
-
-@others</t>
-<t tx="leo.20210311162905.1">@language md
+<t tx="leo.20210311163623.1">@language md
 ---
 Title: 2021-協同產品設計實習stage1 W2
 Date: 2021-02-25 11:00
@@ -146,67 +129,22 @@ Author: 40823106
 
 @others
 </t>
-<t tx="leo.20210311163623.1">@language md
+<t tx="leo.20210513152518.1">@language md
 ---
-Title: 2021-協同產品設計實習 W2
+Title: 2021-協同產品設計實習stage1 W3
 Date: 2021-02-25 11:00
 Category: Misc
-Tags: 2021-協同產品設計實習 W2
-Slug: 2021-協同產品設計實習VW2
+Tags: 2021-協同產品設計實習 stage1 W3
+Slug: 2021-協同產品設計實習stage1 W3
 Author: 40823106
 ---
 
-第二周進度:執行小組專案 
-
-&lt;!-- PELICAN_END_SUMMARY --&gt;
-
-</t>
-<t tx="leo.20210513144032.1">@language md
----
-Title: 2021-協同產品設計實習stage1 W4
-Date: 2021-02-25 11:00
-Category: Misc
-Tags: 2021-協同產品設計實習 stage1 W4
-Slug: 2021-協同產品設計實習stage1 W4
-Author: 40823106
----
-
-第四周進度:上台報告
+第三周進度:設定coppelia sim (V-rep)導入模型並模擬
 
 &lt;!-- PELICAN_END_SUMMARY --&gt;
 
 @others</t>
-<t tx="leo.20210513144213.1">@language md
----
-Title: 2021-協同產品設計實習stage2 W5
-Date: 2021-02-25 11:00
-Category: Misc
-Tags: 2021-協同產品設計實習 stage2 W5
-Slug: 2021-協同產品設計實習stage2 W5
-Author: 40823106
----
-
-第五周進度:這次的專案，決定以上一次未完成的排球扣球練習器進行改良，並且討論接下來幾周的進度
-
-&lt;!-- PELICAN_END_SUMMARY --&gt;
-
-@others</t>
-<t tx="leo.20210513144644.1">@language md
----
-Title: 2021-協同產品設計實習stage2 W6
-Date: 2021-02-25 11:00
-Category: Misc
-Tags: 2021-協同產品設計實習 stage2 W6
-Slug: 2021-協同產品設計實習stage2 W6
-Author: 40823106
----
-
-第六周進度:這次的專案，決定以上一次未完成的排球扣球練習器進行改良，並且討論接下來幾周的進度
-
-&lt;!-- PELICAN_END_SUMMARY --&gt;
-
-@others</t>
-<t tx="leo.20210513144844.1">@language md
+<t tx="leo.20210513152537.1">@language md
 ---
 Title: 2021-協同產品設計實習stage2 W7
 Date: 2021-02-25 11:00
@@ -221,7 +159,23 @@ Author: 40823106
 &lt;!-- PELICAN_END_SUMMARY --&gt;
 
 @others</t>
-<t tx="leo.20210513144945.1">@language md
+<t tx="leo.20210513152544.1">@language md
+---
+Title: 2021-協同產品設計實習 stage2 W9
+Date: 2021-02-25 11:00
+Category: Misc
+Tags: 2021-協同產品設計實習 stage2 W9
+Slug: 2021-協同產品設計實習stage2 W9
+Author: 40823106
+---
+
+第九周進度:上台報告
+
+
+&lt;!-- PELICAN_END_SUMMARY --&gt;
+
+@others</t>
+<t tx="leo.20210513152547.1">@language md
 ---
 Title: 2021-協同產品設計實習 stage2 W8
 Date: 2021-02-25 11:00
@@ -237,18 +191,47 @@ Author: 40823106
 &lt;!-- PELICAN_END_SUMMARY --&gt;
 
 @others</t>
-<t tx="leo.20210513145218.1">@language md
+<t tx="leo.20210513152553.1">@language md
 ---
-Title: 2021-協同產品設計實習 stage2 W9
+Title: 2021-協同產品設計實習stage2 W6
 Date: 2021-02-25 11:00
 Category: Misc
-Tags: 2021-協同產品設計實習 stage2 W9
-Slug: 2021-協同產品設計實習stage2 W9
+Tags: 2021-協同產品設計實習 stage2 W6
+Slug: 2021-協同產品設計實習stage2 W6
 Author: 40823106
 ---
 
-第九周進度:上台報告
+第六周進度:這次的專案，決定以上一次未完成的排球扣球練習器進行改良，並且討論接下來幾周的進度
 
+&lt;!-- PELICAN_END_SUMMARY --&gt;
+
+@others</t>
+<t tx="leo.20210513152555.1">@language md
+---
+Title: 2021-協同產品設計實習stage2 W5
+Date: 2021-02-25 11:00
+Category: Misc
+Tags: 2021-協同產品設計實習 stage2 W5
+Slug: 2021-協同產品設計實習stage2 W5
+Author: 40823106
+---
+
+第五周進度:這次的專案，決定以上一次未完成的排球扣球練習器進行改良，並且討論接下來幾周的進度
+
+&lt;!-- PELICAN_END_SUMMARY --&gt;
+
+@others</t>
+<t tx="leo.20210513152557.1">@language md
+---
+Title: 2021-協同產品設計實習stage1 W4
+Date: 2021-02-25 11:00
+Category: Misc
+Tags: 2021-協同產品設計實習 stage1 W4
+Slug: 2021-協同產品設計實習stage1 W4
+Author: 40823106
+---
+
+第四周進度:上台報告
 
 &lt;!-- PELICAN_END_SUMMARY --&gt;
 
