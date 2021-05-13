@@ -5,29 +5,92 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://40823106.github.io/cd2021/blog/</loc>
-<lastmod>2021-05-13T15:52:15-00:00</lastmod>
+<lastmod>2021-05-13T16:27:31-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://40823106.github.io/cd2021/blog/archives.html</loc>
-<lastmod>2021-05-13T15:52:15-00:00</lastmod>
+<lastmod>2021-05-13T16:27:31-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://40823106.github.io/cd2021/blog/tags.html</loc>
-<lastmod>2021-05-13T15:52:15-00:00</lastmod>
+<lastmod>2021-05-13T16:27:31-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://40823106.github.io/cd2021/blog/categories.html</loc>
-<lastmod>2021-05-13T15:52:15-00:00</lastmod>
+<lastmod>2021-05-13T16:27:31-00:00</lastmod>
 <changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://40823106.github.io/cd2021/blog/pages/2021-協同產品設計實習stage1 W1/</loc>
+<lastmod>2021-05-13T15:59:49+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://40823106.github.io/cd2021/blog/pages/2021-協同產品設計實習stage1 W2/</loc>
+<lastmod>2021-05-13T16:10:27+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://40823106.github.io/cd2021/blog/pages/2021-協同產品設計實習stage1 W3/</loc>
+<lastmod>2021-05-13T15:59:49+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://40823106.github.io/cd2021/blog/pages/2021-協同產品設計實習stage1 W4/</loc>
+<lastmod>2021-05-13T15:59:49+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://40823106.github.io/cd2021/blog/pages/2021-協同產品設計實習stage2 W5/</loc>
+<lastmod>2021-05-13T15:59:49+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://40823106.github.io/cd2021/blog/pages/2021-協同產品設計實習stage2 W6/</loc>
+<lastmod>2021-05-13T15:59:49+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://40823106.github.io/cd2021/blog/pages/2021-協同產品設計實習stage2 W7/</loc>
+<lastmod>2021-05-13T15:59:49+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://40823106.github.io/cd2021/blog/pages/2021-協同產品設計實習stage2 W8/</loc>
+<lastmod>2021-05-13T15:59:49+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://40823106.github.io/cd2021/blog/pages/2021-協同產品設計實習stage2 W9/</loc>
+<lastmod>2021-05-13T15:59:49+08:00</lastmod>
+<changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
