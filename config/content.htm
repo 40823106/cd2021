@@ -176,3 +176,194 @@
 <p>And it is the same expression that I got following the geometric approach in the previous section.</p>
 <p>這與我在上一節中遵循幾何方法得到的表達式相同。</p>
 <p><img alt="" height="241" src="/images/螢幕擷取畫面 2021-06-14 142424.jpg" width="518"/></p>
+<h2>WEEK16</h2>
+<p>1.<span>Onshape 零組件繪製</span></p>
+<p><span>點選所繪製的零件-匯出</span></p>
+<p><img alt="" height="792" src="/images/螢幕擷取畫面 2021-06-16 203657.jpg" width="366"/></p>
+<p>並將檔案設定為STL檔-單位為mm-解析度為精細</p>
+<p><img alt="" height="476" src="/images/螢幕擷取畫面 2021-06-16 204124.jpg" width="500"/></p>
+<p><span>圖檔連結:</span><br/><a href="https://cad.onshape.com/documents/15e83407d80dfa73cd0a79b4/w/708c36c519f886a7cf619237/e/8ab38e3393432ffc8ab92eae" rel="nofollow">https://cad.onshape.com/documents/15e83407d80dfa73cd0a79b4/w/708c36c519f886a7cf619237/e/8ab38e3393432ffc8ab92eae</a></p>
+<p>2.<span>建立 CoppeliaSim 4.1.0 MTB robot 場景</span></p>
+<p><span>選擇File-Import-Mesh將檔案匯入</span></p>
+<p><span><img alt="" height="285" src="/images/螢幕擷取畫面 2021-06-16 204831.jpg" width="342"/></span></p>
+<p><span>選擇Edit-Grouping-Divide selected shapes 將檔案拆解方便定位軸</span></p>
+<p><span><img alt="" height="262" src="/images/螢幕擷取畫面 2021-06-16 204951.jpg" width="300"/></span></p>
+<p><span>點選零件Add-Comvex hull of selection將檔案曲線精密化</span></p>
+<p><img alt="" height="367" src="/images/螢幕擷取畫面 2021-06-16 205144.jpg" width="400"/></p>
+<p>點選零件-toggle shape 進行零件區域選取-選完點extract shape</p>
+<p>這個方法可以將物件拆解產生新的區域</p>
+<p><img alt="" height="355" src="/images/螢幕擷取畫面 2021-06-16 205657.jpg" width="500"/></p>
+<p>先點軸-再點物體-點選移動物件-再點Position進行軸的定位</p>
+<p><img alt="" height="561" src="/images/螢幕擷取畫面 2021-06-16 210049.jpg" width="500"/></p>
+<p><span>Force sensor是一個力傳感器可以同時測出三個方向和力矩</span></p>
+<p><img alt="" height="397" src="/images/螢幕擷取畫面 2021-06-16 210416.jpg" width="278"/></p>
+<p><img alt="" height="158" src="/images/螢幕擷取畫面 2021-06-16 210526.jpg" width="200"/></p>
+<p>Revolute-選轉的軸</p>
+<p>Prismatic-上下移動的軸</p>
+<p><img alt="" height="408" src="/images/螢幕擷取畫面 2021-06-16 210707.jpg" width="445"/></p>
+<p>grippers可以點選吸盤</p>
+<p><img alt="" height="600" src="/images/螢幕擷取畫面 2021-06-16 210930.jpg" width="122"/></p>
+<p>Cuboid為長方體</p>
+<p><img alt="" height="432" src="/images/螢幕擷取畫面 2021-06-16 211104.jpg" width="428"/></p>
+<p><span>2.建立 CoppeliaSim 4.1.0 MTB robot 場景</span><br/><span>影片連結:</span><br/><a href="https://youtu.be/1oJov8iJlvw" rel="nofollow">https://youtu.be/1oJov8iJlvw</a><br/><span>W16_exam雲端連結:</span><br/><a href="https://drive.google.com/drive/folders/1xdaI_OUvxgJNPPZhEz4KEd7s1sIHOJBq?usp=sharing" rel="nofollow">https://drive.google.com/drive/folders/1xdaI_OUvxgJNPPZhEz4KEd7s1sIHOJBq?usp=sharing</a></p>
+<p>鍵盤控制的部分沒有完成，只有建立場景，鍵盤控制的程式碼還需要時間研究<br/><span>3.手臂末端加入 components-gripper-suction pad 吸盤</span><br/><span>影片連結<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/Y8DhAFJCE68" title="YouTube video player" width="560"></iframe><br/></span></p>
+<p><span>4.逆向運動學函式</span><br/><span>影片連結:<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/uMLSgMTuc9o" title="YouTube video player" width="560"></iframe></span></p>
+<div>
+<div class="syntaxhighlighter lua" id="highlighter_681">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="lua keyword">function</code> <code class="lua plain">moving(x,y)</code></div>
+<div class="line number2 index1 alt1"><code class="lua spaces">    </code><code class="lua plain">a=0.5</code></div>
+<div class="line number3 index2 alt2"><code class="lua spaces">    </code><code class="lua plain">b=0.5</code></div>
+<div class="line number4 index3 alt1"><code class="lua spaces">    </code><code class="lua plain">c=</code><code class="lua functions">math.pow</code><code class="lua plain">((</code><code class="lua functions">math.pow</code><code class="lua plain">(x,2)+</code><code class="lua functions">math.pow</code><code class="lua plain">(y,2)),0.5)</code></div>
+<div class="line number5 index4 alt2"><code class="lua spaces">    </code><code class="lua plain">s=(a+b+c)/2</code></div>
+<div class="line number6 index5 alt1"><code class="lua spaces">    </code><code class="lua plain">area=</code><code class="lua functions">math.pow</code><code class="lua plain">((s*(s-a)*(s-b)*(s-c)),0.5)</code></div>
+<div class="line number7 index6 alt2"><code class="lua spaces">    </code><code class="lua plain">h=area/(2*c)</code></div>
+<div class="line number8 index7 alt1"><code class="lua spaces">    </code><code class="lua plain">deg1_base=</code><code class="lua functions">math.atan</code><code class="lua plain">(x/y)</code></div>
+<div class="line number9 index8 alt2"><code class="lua spaces">    </code><code class="lua keyword">if</code> <code class="lua plain">x&lt;0 </code><code class="lua keyword">and</code> <code class="lua plain">y&lt;0 </code><code class="lua keyword">then</code></div>
+<div class="line number10 index9 alt1"><code class="lua spaces">        </code><code class="lua plain">deg1_base=deg1_base+</code><code class="lua functions">math.pi</code></div>
+<div class="line number11 index10 alt2"><code class="lua spaces">    </code><code class="lua keyword">end</code></div>
+<div class="line number12 index11 alt1"><code class="lua spaces">    </code><code class="lua plain">deg1_tri=</code><code class="lua functions">math.asin</code><code class="lua plain">(h/a)</code></div>
+<div class="line number13 index12 alt2"><code class="lua spaces">    </code><code class="lua plain">deg1=deg1_base+deg1_tri</code></div>
+<div class="line number14 index13 alt1"><code class="lua spaces">    </code><code class="lua plain">deg2=</code><code class="lua functions">math.pi</code><code class="lua plain">-(0.5*</code><code class="lua functions">math.pi</code><code class="lua plain">-deg1_tri)-</code><code class="lua functions">math.acos</code><code class="lua plain">(h/b)</code></div>
+<div class="line number15 index14 alt2"><code class="lua spaces">    </code><code class="lua plain">deg3=deg2-deg1</code></div>
+<div class="line number16 index15 alt1"><code class="lua spaces">    </code><code class="lua plain">sim.setJointTargetPosition(AB,deg1)</code></div>
+<div class="line number17 index16 alt2"><code class="lua spaces">    </code><code class="lua plain">sim.setJointTargetPosition(BC,-deg2)</code></div>
+<div class="line number18 index17 alt1"><code class="lua spaces">    </code><code class="lua plain">sim.setJointTargetPosition(CD,deg3)</code></div>
+<div class="line number19 index18 alt2"><code class="lua keyword">end</code></div>
+<div class="line number20 index19 alt1"> </div>
+<div class="line number21 index20 alt2"><code class="lua keyword">function</code> <code class="lua plain">sysCall_threadmain()</code></div>
+<div class="line number22 index21 alt1"><code class="lua spaces">    </code><code class="lua plain">t=3</code></div>
+<div class="line number23 index22 alt2"><code class="lua spaces">    </code><code class="lua plain">AB=sim.getObjectHandle(</code><code class="lua string">'AB'</code><code class="lua plain">)</code></div>
+<div class="line number24 index23 alt1"><code class="lua spaces">    </code><code class="lua plain">BC=sim.getObjectHandle(</code><code class="lua string">'BC'</code><code class="lua plain">)</code></div>
+<div class="line number25 index24 alt2"><code class="lua spaces">    </code><code class="lua plain">CD=sim.getObjectHandle(</code><code class="lua string">'CD'</code><code class="lua plain">)</code></div>
+<div class="line number26 index25 alt1"><code class="lua spaces">    </code><code class="lua plain">Z=sim.getObjectHandle(</code><code class="lua string">'Z'</code><code class="lua plain">)</code></div>
+<div class="line number27 index26 alt2"><code class="lua spaces">    </code><code class="lua plain">sim.setJointTargetPosition(AB,0)</code></div>
+<div class="line number28 index27 alt1"><code class="lua spaces">    </code><code class="lua plain">sim.setJointTargetPosition(BC,0)</code></div>
+<div class="line number29 index28 alt2"><code class="lua spaces">    </code><code class="lua plain">sim.setJointTargetPosition(CD,0)</code></div>
+<div class="line number30 index29 alt1"><code class="lua spaces">    </code><code class="lua plain">sim.setJointTargetPosition(Z,0)</code></div>
+<div class="line number31 index30 alt2"><code class="lua spaces">    </code><code class="lua plain">sim.wait(t)</code></div>
+<div class="line number32 index31 alt1"><code class="lua spaces">    </code><code class="lua plain">sim.setIntegerSignal(</code><code class="lua string">"pad_switch"</code><code class="lua plain">,1)</code></div>
+<div class="line number33 index32 alt2"><code class="lua spaces">    </code><code class="lua plain">sim.setJointTargetPosition(Z,-0.09)</code></div>
+<div class="line number34 index33 alt1"><code class="lua spaces">    </code><code class="lua plain">sim.wait(t)</code></div>
+<div class="line number35 index34 alt2"><code class="lua spaces">    </code><code class="lua plain">sim.setJointTargetPosition(Z,0)</code></div>
+<div class="line number36 index35 alt1"><code class="lua spaces">    </code><code class="lua plain">sim.wait(t)</code></div>
+<div class="line number37 index36 alt2"><code class="lua spaces">    </code><code class="lua plain">moving(0.2,0.7)</code></div>
+<div class="line number38 index37 alt1"><code class="lua spaces">    </code><code class="lua plain">sim.wait(t)</code></div>
+<div class="line number39 index38 alt2"><code class="lua spaces">    </code><code class="lua plain">sim.setIntegerSignal(</code><code class="lua string">"pad_switch"</code><code class="lua plain">,0)</code></div>
+<div class="line number40 index39 alt1"><code class="lua spaces">    </code><code class="lua plain">sim.wait(t)</code></div>
+<div class="line number41 index40 alt2"><code class="lua spaces">    </code><code class="lua plain">sim.setIntegerSignal(</code><code class="lua string">"pad_switch"</code><code class="lua plain">,1)</code></div>
+<div class="line number42 index41 alt1"><code class="lua spaces">    </code><code class="lua plain">sim.wait(t)</code></div>
+<div class="line number43 index42 alt2"><code class="lua spaces">    </code><code class="lua plain">sim.setJointTargetPosition(Z,-0.09)</code></div>
+<div class="line number44 index43 alt1"><code class="lua spaces">    </code><code class="lua plain">sim.wait(t)</code></div>
+<div class="line number45 index44 alt2"><code class="lua spaces">    </code><code class="lua plain">sim.setJointTargetPosition(Z,0)</code></div>
+<div class="line number46 index45 alt1"><code class="lua spaces">    </code><code class="lua plain">sim.wait(t)</code></div>
+<div class="line number47 index46 alt2"><code class="lua spaces">    </code><code class="lua plain">moving(-0.3,-0.55)</code></div>
+<div class="line number48 index47 alt1"><code class="lua spaces">    </code><code class="lua plain">sim.wait(t)   </code></div>
+<div class="line number49 index48 alt2"><code class="lua spaces">    </code><code class="lua plain">sim.setIntegerSignal(</code><code class="lua string">"pad_switch"</code><code class="lua plain">,0)</code></div>
+<div class="line number50 index49 alt1"><code class="lua spaces">    </code> </div>
+<div class="line number51 index50 alt2"><code class="lua keyword">end</code></div>
+<div class="line number52 index51 alt1"> </div>
+<div class="line number53 index52 alt2"> </div>
+<div class="line number54 index53 alt1"> </div>
+<div class="line number55 index54 alt2"> </div>
+<div class="line number56 index55 alt1"> </div>
+<div class="line number57 index56 alt2"> </div>
+<div class="line number58 index57 alt1"> </div>
+<div class="line number59 index58 alt2"> </div>
+<div class="line number60 index59 alt1"><code class="lua keyword">end</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>AB.BC.CD.Z對應為軸的名稱</p>
+<p><span>moving(0.2,0.7)、moving(-0.3,-0.55)為指定位置</span></p>
+</div>
+</div>
+<p><br/><span>5.Python remote API 逆向運動學函式</span><br/><span>操作影片:<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/VwWsI3xD43U" title="YouTube video player" width="560"></iframe></span></p>
+<div class="line number1 index0 alt2"><code class="py keyword">import</code> <code class="py plain">sim as vrep</code></div>
+<div class="line number2 index1 alt1"><code class="py keyword">import</code> <code class="py plain">math</code></div>
+<div class="line number3 index2 alt2"><code class="py keyword">import</code> <code class="py plain">random</code></div>
+<div class="line number4 index3 alt1"><code class="py keyword">import</code> <code class="py plain">time</code></div>
+<div class="line number5 index4 alt2"><code class="py keyword">import</code> <code class="py plain">math</code></div>
+<div class="line number6 index5 alt1"> </div>
+<div class="line number7 index6 alt2"><code class="py keyword">def</code> <code class="py plain">moving(x,y):</code></div>
+<div class="line number8 index7 alt1"><code class="py spaces">       </code><code class="py plain">a</code><code class="py keyword">=</code><code class="py value">0.5</code></div>
+<div class="line number9 index8 alt2"><code class="py spaces">       </code><code class="py plain">b</code><code class="py keyword">=</code><code class="py value">0.5</code></div>
+<div class="line number10 index9 alt1"><code class="py spaces">       </code><code class="py plain">c</code><code class="py keyword">=</code><code class="py plain">math.</code><code class="py functions">pow</code><code class="py plain">((math.</code><code class="py functions">pow</code><code class="py plain">(x,</code><code class="py value">2</code><code class="py plain">)</code><code class="py keyword">+</code><code class="py plain">math.</code><code class="py functions">pow</code><code class="py plain">(y,</code><code class="py value">2</code><code class="py plain">)),</code><code class="py value">0.5</code><code class="py plain">)</code></div>
+<div class="line number11 index10 alt2"><code class="py spaces">       </code><code class="py plain">s</code><code class="py keyword">=</code><code class="py plain">(a</code><code class="py keyword">+</code><code class="py plain">b</code><code class="py keyword">+</code><code class="py plain">c)</code><code class="py keyword">/</code><code class="py value">2</code></div>
+<div class="line number12 index11 alt1"><code class="py spaces">       </code><code class="py plain">area</code><code class="py keyword">=</code><code class="py plain">math.</code><code class="py functions">pow</code><code class="py plain">((s</code><code class="py keyword">*</code><code class="py plain">(s</code><code class="py keyword">-</code><code class="py plain">a)</code><code class="py keyword">*</code><code class="py plain">(s</code><code class="py keyword">-</code><code class="py plain">b)</code><code class="py keyword">*</code><code class="py plain">(s</code><code class="py keyword">-</code><code class="py plain">c)),</code><code class="py value">0.5</code><code class="py plain">)</code></div>
+<div class="line number13 index12 alt2"><code class="py spaces">       </code><code class="py plain">h</code><code class="py keyword">=</code><code class="py plain">area</code><code class="py keyword">/</code><code class="py plain">(</code><code class="py value">2</code><code class="py keyword">*</code><code class="py plain">c)</code></div>
+<div class="line number14 index13 alt1"><code class="py spaces">       </code><code class="py plain">deg1_base</code><code class="py keyword">=</code><code class="py plain">math.atan(x</code><code class="py keyword">/</code><code class="py plain">y)</code></div>
+<div class="line number15 index14 alt2"><code class="py spaces">       </code><code class="py keyword">if</code> <code class="py plain">x&lt;</code><code class="py value">0</code> <code class="py keyword">and</code> <code class="py plain">y&lt;</code><code class="py value">0</code> <code class="py plain">:</code></div>
+<div class="line number16 index15 alt1"><code class="py spaces">                </code><code class="py plain">deg1_base</code><code class="py keyword">=</code><code class="py plain">deg1_base</code><code class="py keyword">+</code><code class="py plain">math.pi</code></div>
+<div class="line number17 index16 alt2"><code class="py spaces">       </code><code class="py plain">deg1_tri</code><code class="py keyword">=</code><code class="py plain">math.asin(h</code><code class="py keyword">/</code><code class="py plain">a)</code></div>
+<div class="line number18 index17 alt1"><code class="py spaces">       </code><code class="py plain">deg1</code><code class="py keyword">=</code><code class="py plain">deg1_base</code><code class="py keyword">+</code><code class="py plain">deg1_tri</code></div>
+<div class="line number19 index18 alt2"><code class="py spaces">       </code><code class="py plain">deg2</code><code class="py keyword">=</code><code class="py plain">math.pi</code><code class="py keyword">-</code><code class="py plain">(</code><code class="py value">0.5</code><code class="py keyword">*</code><code class="py plain">math.pi</code><code class="py keyword">-</code><code class="py plain">deg1_tri)</code><code class="py keyword">-</code><code class="py plain">math.acos(h</code><code class="py keyword">/</code><code class="py plain">b)</code></div>
+<div class="line number20 index19 alt1"><code class="py spaces">       </code><code class="py plain">deg3</code><code class="py keyword">=</code><code class="py plain">deg2</code><code class="py keyword">-</code><code class="py plain">deg1</code></div>
+<div class="line number21 index20 alt2"><code class="py spaces">       </code><code class="py plain">vrep.simxSetJointTargetPosition(clientID,joint1,deg1,opmode)</code></div>
+<div class="line number22 index21 alt1"><code class="py spaces">       </code><code class="py plain">vrep.simxSetJointTargetPosition(clientID,joint2,</code><code class="py keyword">-</code> <code class="py plain">deg2,opmode)</code></div>
+<div class="line number23 index22 alt2"><code class="py spaces">       </code><code class="py plain">vrep.simxSetJointTargetPosition(clientID,joint3,deg3,opmode)</code></div>
+<div class="line number24 index23 alt1"> </div>
+<div class="line number25 index24 alt2"> </div>
+<div class="line number26 index25 alt1"> </div>
+<div class="line number27 index26 alt2"><code class="py functions">print</code> <code class="py plain">(</code><code class="py string">'Start'</code><code class="py plain">)</code></div>
+<div class="line number28 index27 alt1"><code class="py spaces"> </code> </div>
+<div class="line number29 index28 alt2"><code class="py plain">vrep.simxFinish(</code><code class="py keyword">-</code><code class="py value">1</code><code class="py plain">)</code></div>
+<div class="line number30 index29 alt1"><code class="py spaces"> </code> </div>
+<div class="line number31 index30 alt2"><code class="py plain">clientID </code><code class="py keyword">=</code> <code class="py plain">vrep.simxStart(</code><code class="py string">'127.0.0.1'</code><code class="py plain">, </code><code class="py value">19997</code><code class="py plain">, </code><code class="py color1">True</code><code class="py plain">, </code><code class="py color1">True</code><code class="py plain">, </code><code class="py value">5000</code><code class="py plain">, </code><code class="py value">5</code><code class="py plain">)</code></div>
+<div class="line number32 index31 alt1"><code class="py spaces">  </code> </div>
+<div class="line number33 index32 alt2"><code class="py keyword">if</code> <code class="py plain">clientID !</code><code class="py keyword">=</code> <code class="py keyword">-</code><code class="py value">1</code><code class="py plain">:</code></div>
+<div class="line number34 index33 alt1"><code class="py spaces">    </code><code class="py functions">print</code> <code class="py plain">(</code><code class="py string">'Connected to remote API server'</code><code class="py plain">)</code></div>
+<div class="line number35 index34 alt2"><code class="py spaces">      </code> </div>
+<div class="line number36 index35 alt1"><code class="py spaces">    </code><code class="py plain">res </code><code class="py keyword">=</code> <code class="py plain">vrep.simxAddStatusbarMessage(</code></div>
+<div class="line number37 index36 alt2"><code class="py spaces">        </code><code class="py plain">clientID, </code><code class="py string">"This is teach by 40823214 "</code><code class="py plain">,</code></div>
+<div class="line number38 index37 alt1"><code class="py spaces">        </code><code class="py plain">vrep.simx_opmode_oneshot)</code></div>
+<div class="line number39 index38 alt2"><code class="py spaces">    </code><code class="py keyword">if</code> <code class="py plain">res </code><code class="py keyword">not</code> <code class="py keyword">in</code> <code class="py plain">(vrep.simx_return_ok, vrep.simx_return_novalue_flag):</code></div>
+<div class="line number40 index39 alt1"><code class="py spaces">        </code><code class="py functions">print</code><code class="py plain">(</code><code class="py string">"Could not add a message to the status bar."</code><code class="py plain">)</code></div>
+<div class="line number41 index40 alt2"><code class="py spaces">  </code> </div>
+<div class="line number42 index41 alt1"><code class="py spaces">     </code> </div>
+<div class="line number43 index42 alt2"><code class="py spaces">    </code><code class="py plain">opmode </code><code class="py keyword">=</code> <code class="py plain">vrep.simx_opmode_oneshot_wait</code></div>
+<div class="line number44 index43 alt1"><code class="py spaces">    </code><code class="py plain">STREAMING </code><code class="py keyword">=</code> <code class="py plain">vrep.simx_opmode_streaming</code></div>
+<div class="line number45 index44 alt2"><code class="py spaces">  </code> </div>
+<div class="line number46 index45 alt1"><code class="py spaces">     </code> </div>
+<div class="line number47 index46 alt2"><code class="py spaces">    </code><code class="py plain">vrep.simxStartSimulation(clientID, opmode)</code></div>
+<div class="line number48 index47 alt1"><code class="py spaces">    </code><code class="py plain">ret,AB</code><code class="py keyword">=</code><code class="py plain">vrep.simxGetObjectHandle(clientID,</code><code class="py string">"AB"</code><code class="py plain">,opmode)</code></div>
+<div class="line number49 index48 alt2"><code class="py spaces">    </code><code class="py plain">ret,BC</code><code class="py keyword">=</code><code class="py plain">vrep.simxGetObjectHandle(clientID,</code><code class="py string">"BC"</code><code class="py plain">,opmode)</code></div>
+<div class="line number50 index49 alt1"><code class="py spaces">    </code><code class="py plain">ret,CD</code><code class="py keyword">=</code><code class="py plain">vrep.simxGetObjectHandle(clientID,</code><code class="py string">"CD"</code><code class="py plain">,opmode)</code></div>
+<div class="line number51 index50 alt2"><code class="py spaces">    </code><code class="py plain">ret,Z</code><code class="py keyword">=</code><code class="py plain">vrep.simxGetObjectHandle(clientID,</code><code class="py string">"Z"</code><code class="py plain">,opmode)</code></div>
+<div class="line number52 index51 alt1"><code class="py spaces">    </code> </div>
+<div class="line number53 index52 alt2"><code class="py spaces">    </code><code class="py plain">vrep.simxSetJointTargetPosition(clientID,<span>AB</span>,</code><code class="py value">0</code><code class="py plain">,opmode)</code></div>
+<div class="line number54 index53 alt1"><code class="py spaces">    </code><code class="py plain">vrep.simxSetJointTargetPosition(clientID,<span>BC</span>,</code><code class="py value">0</code><code class="py plain">,opmode)</code></div>
+<div class="line number55 index54 alt2"><code class="py spaces">    </code><code class="py plain">vrep.simxSetJointTargetPosition(clientID,<span>CD</span>,</code><code class="py value">0</code><code class="py plain">,opmode)</code></div>
+<div class="line number56 index55 alt1"><code class="py spaces">    </code><code class="py plain">vrep.simxSetIntegerSignal(clientID,</code><code class="py string">"pad_switch"</code><code class="py plain">,</code><code class="py value">1</code><code class="py plain">,opmode)</code></div>
+<div class="line number57 index56 alt2"><code class="py spaces">    </code><code class="py plain">vrep.simxSetJointTargetPosition(clientID,<span>Z</span>,</code><code class="py keyword">-</code><code class="py value">0.09</code><code class="py plain">,opmode)</code></div>
+<div class="line number58 index57 alt1"><code class="py spaces">    </code><code class="py plain">time.sleep(</code><code class="py value">1</code><code class="py plain">)</code></div>
+<div class="line number59 index58 alt2"><code class="py spaces">    </code><code class="py plain">vrep.simxSetJointTargetPosition(clientID,<span>Z</span>,</code><code class="py value">0</code><code class="py plain">,opmode)</code></div>
+<div class="line number60 index59 alt1"><code class="py spaces">    </code><code class="py keyword">while</code> <code class="py color1">True</code><code class="py plain">:</code></div>
+<div class="line number61 index60 alt2"><code class="py spaces">        </code><code class="py plain">moving(</code><code class="py value">0.2</code><code class="py plain">,</code><code class="py value">0.7</code><code class="py plain">)</code></div>
+<div class="line number62 index61 alt1"><code class="py spaces">        </code><code class="py plain">time.sleep(</code><code class="py value">1</code><code class="py plain">)</code></div>
+<div class="line number63 index62 alt2"><code class="py spaces">        </code><code class="py plain">vrep.simxSetIntegerSignal(clientID,</code><code class="py string">"pad_switch"</code><code class="py plain">,</code><code class="py value">0</code><code class="py plain">,opmode)</code></div>
+<div class="line number64 index63 alt1"><code class="py spaces">        </code><code class="py plain">time.sleep(</code><code class="py value">1</code><code class="py plain">)</code></div>
+<div class="line number65 index64 alt2"><code class="py spaces">        </code><code class="py plain">vrep.simxSetIntegerSignal(clientID,</code><code class="py string">"pad_switch"</code><code class="py plain">,</code><code class="py value">1</code><code class="py plain">,opmode)</code></div>
+<div class="line number66 index65 alt1"><code class="py spaces">        </code><code class="py plain">vrep.simxSetJointTargetPosition(clientID,<span>Z</span>,</code><code class="py keyword">-</code><code class="py value">0.09</code><code class="py plain">,opmode)</code></div>
+<div class="line number67 index66 alt2"><code class="py spaces">        </code><code class="py plain">time.sleep(</code><code class="py value">1</code><code class="py plain">)</code></div>
+<div class="line number68 index67 alt1"><code class="py spaces">        </code><code class="py plain">vrep.simxSetJointTargetPosition(clientID,<span>Z</span>,</code><code class="py value">0</code><code class="py plain">,opmode)</code></div>
+<div class="line number69 index68 alt2"><code class="py spaces">        </code><code class="py plain">moving(</code><code class="py keyword">-</code><code class="py value">0.3</code><code class="py plain">,</code><code class="py keyword">-</code><code class="py value">0.55</code><code class="py plain">)</code></div>
+<div class="line number70 index69 alt1"><code class="py spaces">        </code><code class="py plain">time.sleep(</code><code class="py value">1</code><code class="py plain">)</code></div>
+<div class="line number71 index70 alt2"><code class="py spaces">        </code><code class="py plain">vrep.simxSetIntegerSignal(clientID,</code><code class="py string">"pad_switch"</code><code class="py plain">,</code><code class="py value">0</code><code class="py plain">,opmode)</code></div>
+<div class="line number72 index71 alt1"><code class="py spaces">        </code><code class="py plain">time.sleep(</code><code class="py value">1</code><code class="py plain">)</code></div>
+<div class="line number73 index72 alt2"><code class="py spaces">        </code><code class="py plain">vrep.simxSetIntegerSignal(clientID,</code><code class="py string">"pad_switch"</code><code class="py plain">,</code><code class="py value">1</code><code class="py plain">,opmode)</code></div>
+<div class="line number74 index73 alt1"><code class="py spaces">        </code><code class="py plain">vrep.simxSetJointTargetPosition(clientID,<span>Z</span>,</code><code class="py keyword">-</code><code class="py value">0.09</code><code class="py plain">,opmode)</code></div>
+<div class="line number75 index74 alt2"><code class="py spaces">        </code><code class="py plain">time.sleep(</code><code class="py value">1</code><code class="py plain">)</code></div>
+<div class="line number76 index75 alt1"><code class="py spaces">        </code><code class="py plain">vrep.simxSetJointTargetPosition(clientID,<span>Z</span>,</code><code class="py value">0</code><code class="py plain">,opmode)</code></div>
+<div class="line number76 index75 alt1"><code class="py plain"></code></div>
+<div class="line number76 index75 alt1"><code class="py plain">心得:</code></div>
+<div class="line number76 index75 alt1"><span face="monospace" style="font-family: monospace;">在這次考試前，我對onshape還不熟，因為平時都是使用inventor，藉由這次的考試讓我對這個免費的網頁繪圖更加的熟悉，再多次操作後，對其相關的功能運用更加的了解</span></div>
+<div class="line number76 index75 alt1"><span face="monospace" style="font-family: monospace;">再先前小組分組中雖然有操作<span>CoppeliaSim的經驗，但當時使用到的機構比較少也沒接觸到程式的部分，但在這次的考試，我對於軟體的機構有更深入的認識，也因為製作的過程失敗很多次，所以我在最後成功組裝零件只需要花費不到10分鐘就可以完成，但仍有其他需要學習的機構</span></span></div>
+<div class="line number76 index75 alt1"><span face="monospace" style="font-family: monospace;"><span>但程式碼的部分是在同學分享的影片中學習到的，且還沒有很熟悉，希望自己可以增強程式方面的運用</span></span></div>
+<div class="line number76 index75 alt1"><span face="monospace" style="font-family: monospace;"><span>謝謝老師與同學的影片幫助，讓我在家裡也可以播放影片學習</span></span></div>
